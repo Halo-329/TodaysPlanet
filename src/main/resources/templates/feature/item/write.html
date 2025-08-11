@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 등록</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/item/write.css">
+    <script src="/js/item/write.js" defer></script>
+</head>
+<body>
+
+    <div th:replace="~{layout/nav.html::navbar}"></div>
+
+    <div class="form-container">
+        <h2>상품 등록</h2>
+        <form action="/item/add" method="POST">
+            <label for="title">제목</label>
+
+            <input type="text" id="title" name="title" placeholder="상품명을 입력하세요" required>
+
+            <label for="price">가격</label>
+            <input type="number" id="price" name="price" placeholder="가격을 입력하세요" required>
+
+            <label for="stock">재고 수량</label>
+            <input type="number" id="stock" name="stock" placeholder="재고 수량을 입력하세요" min="0" required>
+
+            <label class="image-upload">이미지
+                <div class="upload-box">
+                    <img src="" id="preview" >
+                    <div class="upload-text">클릭하여 이미지를 업로드하세요</div>
+                </div>
+                <input type="file" accept="image/*" onchange="getURL(this)" style="display: none;">
+            </label>
+
+            <input type="hidden" name="imgUrl" id="imgUrl">
+            <p th:if="${error}" th:text="${error}" class="error-message">에러 메시지</p>
+
+
+
+
+            <button type="submit">등록</button>
+
+
+        </form>
+
+
+
+
+    </div>
+
+</body>
+</html>

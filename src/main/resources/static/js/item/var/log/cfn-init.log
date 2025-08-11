@@ -1,0 +1,29 @@
+2025-06-15 09:37:40,772 [INFO] -----------------------Starting build-----------------------
+2025-06-15 09:37:40,779 [INFO] Running configSets: _OnInstanceBoot
+2025-06-15 09:37:40,793 [INFO] Running configSet _OnInstanceBoot
+2025-06-15 09:37:40,796 [INFO] Running config AWSEBBaseConfig
+2025-06-15 09:37:41,179 [INFO] Command clearbackupfiles succeeded
+2025-06-15 09:37:41,192 [INFO] Running config AWSEBCfnHupEndpointOverride
+2025-06-15 09:37:41,201 [INFO] Command clearbackupfiles succeeded
+2025-06-15 09:37:41,203 [INFO] ConfigSets completed
+2025-06-15 09:37:41,203 [INFO] -----------------------Build complete-----------------------
+2025-06-15 09:38:00,124 [INFO] -----------------------Starting build-----------------------
+2025-06-15 09:38:00,132 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-06-15 09:38:00,135 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-06-15 09:38:00,135 [INFO] ConfigSets completed
+2025-06-15 09:38:00,136 [INFO] -----------------------Build complete-----------------------
+2025-06-15 09:38:02,328 [INFO] -----------------------Starting build-----------------------
+2025-06-15 09:38:02,334 [INFO] Running configSets: Infra-EmbeddedPostBuild
+2025-06-15 09:38:02,337 [INFO] Running configSet Infra-EmbeddedPostBuild
+2025-06-15 09:38:02,337 [INFO] ConfigSets completed
+2025-06-15 09:38:02,337 [INFO] -----------------------Build complete-----------------------
+2025-06-15 09:48:56,710 [INFO] -----------------------Starting build-----------------------
+2025-06-15 09:48:56,717 [INFO] Running configSets: Infra-EmbeddedPreBuild
+2025-06-15 09:48:56,719 [INFO] Running configSet Infra-EmbeddedPreBuild
+2025-06-15 09:48:56,720 [INFO] ConfigSets completed
+2025-06-15 09:48:56,720 [INFO] -----------------------Build complete-----------------------
+2025-06-15 09:48:58,667 [INFO] -----------------------Starting build-----------------------
+2025-06-15 09:48:58,672 [INFO] Running configSets: Infra-EmbeddedPostBuild
+2025-06-15 09:48:58,673 [INFO] Running configSet Infra-EmbeddedPostBuild
+2025-06-15 09:48:58,674 [INFO] ConfigSets completed
+2025-06-15 09:48:58,674 [INFO] -----------------------Build complete-----------------------

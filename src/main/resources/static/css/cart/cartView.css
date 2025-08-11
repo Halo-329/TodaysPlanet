@@ -1,0 +1,152 @@
+/* ─────────────────────────────────────────────────────
+   cartView.css (장바구니 전용 스타일)
+   ───────────────────────────────────────────────────── */
+
+/* 컨테이너 & 제목 */
+.cart-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1.cart-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 아이템 리스트 */
+.cart-items {
+    border-top: 2px solid #eee;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.item-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* ─────────────────────────────────────────────────────
+   수량 조절 + 삭제 버튼 컨트롤 (오른쪽 정렬)
+   ───────────────────────────────────────────────────── */
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 수량 컨트롤 */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* 수량 버튼 (전역 button 스타일 초기화) */
+.quantity-control button {
+    background-color: #f0f0f0;
+    border: none;       /* 전역 border override */
+    padding: 0;         /* 전역 padding override */
+    margin: 0;          /* 전역 margin-top override */
+    width: 32px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* 수량 텍스트 */
+.quantity-control .quantity {
+    display: block;
+    margin: 0;          /* 전역 margin-top override */
+    width: 40px;
+    height: 100%;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+/* 삭제 버튼 (전역 button 스타일 일부 override) */
+.remove-item-button {
+    margin-top: 0;      /* 전역 margin-top override */
+    padding: 5px 10px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;       /* 전역 border override */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item-button:hover {
+    background-color: #d9363e;
+}
+
+/* ─────────────────────────────────────────────────────
+   합계 & 주문 버튼
+   ───────────────────────────────────────────────────── */
+.cart-summary {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.order-button {
+    margin-top: 0;      /* 전역 margin-top override */
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;       /* 전역 border override */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}

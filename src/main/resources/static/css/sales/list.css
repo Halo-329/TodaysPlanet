@@ -1,0 +1,39 @@
+/* 주문 내역 타이틀 */
+.title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 주문 테이블 스타일 */
+.order-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    font-size: 16px;
+}
+
+/* 테이블 헤더 */
+.order-table th {
+    background-color: #f0f0f0;
+    color: #444;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* 테이블 바디 */
+.order-table td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 짝수 행 배경색 */
+.order-table tr:nth-child(even) {
+    background-color: #fafafa;
+}

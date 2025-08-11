@@ -1,0 +1,55 @@
+<!-- templates/order/checkout.html -->
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주문 확인</title>
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sales/order.css">
+</head>
+<body>
+
+<div th:replace="~{layout/nav.html::navbar}"></div>
+
+<div th:if="${error}">
+    <script th:inline="javascript">
+        alert([[${error}]]);
+    </script>
+</div>
+
+<div class="checkout-container">
+    <h2>🛍️ 주문 확인</h2>
+
+
+    <div class="order-summary">
+        <img th:src="${item.imageURL}" alt="상품 이미지">
+        <h3 th:text="${item.title}">상품명</h3>
+        <p th:class="'stock-count ' + (${item.stock} < 5 ? 'low' : '')"
+   th:text="'재고 : ' + ${item.stock} + '개'"></p>
+        <p th:text="${item.price + '원'}">가격</p>
+    </div>
+
+    <form action="/sales/pay" method="POST" class="order-form">
+        <input type="hidden" name="itemId" th:value="${item.id}" />
+
+<!--        <label>배송지 주소</label>-->
+<!--        <input type="text" name="address" placeholder="주소를 입력하세요" required />-->
+
+        <label>수량</label>
+        <input type="number" name="count" value="1" min="1" required />
+
+        <label>결제 수단</label>
+        <select name="paymentMethod">
+<!--            <option value="card">신용카드</option>-->
+<!--            <option value="bank">계좌이체</option>-->
+<!--            <option value="kakaopay">카카오페이</option>-->
+            <option value="deposit">무통장입금</option>
+        </select>
+
+        <button type="submit">결제하기</button>
+    </form>
+</div>
+
+</body>
+</html>

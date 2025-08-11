@@ -1,0 +1,10 @@
+
+
+<!-- templates/layout/searchbar.html -->
+<div th:fragment="searchbar">
+    <form action="/item/search" method="post" class="search-form">
+        <input class="search-input" name="searchText" type="text" placeholder="검색어를 입력하세요(2글자 이상)">
+        <button class="search-button" type="submit">🔍 검색</button>
+    </form>
+</div>
+

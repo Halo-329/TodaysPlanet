@@ -1,0 +1,13 @@
+<!-- templates/layout/pagination.html -->
+<div th:fragment="pagination(currentPage, totalPages)">
+    <nav class="pagination">
+        <ul class="pagination-list">
+            <li th:each="i : ${#numbers.sequence(1, totalPages)}">
+                <a th:href="@{/templates/feature/item/list/page/{pageNum}(pageNum=${i})}"
+                   th:text="${i}"
+                   th:classappend="${i == currentPage} ? 'active' : ''">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/member/login.css">
+</head>
+
+<body>
+
+<main>
+    <!-- 서버로 POST 방식 전송 -->
+    <form class="login-container" action="/member/login/jwt" method="POST">
+        <h2><a href="/item/list">Shopping Mall</a></h2>
+
+        <input id="username" name="username" placeholder="아이디" required>
+        <input id="password" name="password" type="password" placeholder="비밀번호" required>
+
+        <!-- 로그인 실패 시 서버에서 에러 메시지 표시 -->
+        <p th:if="${loginError != null}" th:text="${loginError}" style="color: red;"></p>
+
+        <!-- submit 방식 로그인 -->
+        <button type="submit">로그인</button>
+
+        <p class="signup-link"> ✋🏻 계정이 없으신가요? <a href="/member/signup">회원가입</a></p>
+    </form>
+</main>
+
+</body>
+</html>

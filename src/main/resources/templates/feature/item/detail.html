@@ -1,0 +1,100 @@
+<!-- templates/item/detail.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 상세</title>
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/item/detail.css">
+    <script src="/js/item/delete.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div id=""></div>
+</div>
+<div th:replace="~{layout/nav.html::navbar}"></div>
+
+<div id="content">
+    <div class="detail">
+            <div class="button-group" th:if="${#authorization.expression('isAuthenticated()') and #authentication.name == data.usrID}">
+                <span th:onclick="|location.href='/item/modify/${data.id}'|"
+                                  style="cursor: pointer; padding: 6px 12px;">✍🏻</span>
+                <span class="delete-btn" th:data-id="${data.id}"
+                                  style="cursor: pointer; padding: 6px 12px;">🗑️</span>
+            </div>
+            <h4>상세페이지</h4>
+            <img th:src="${data.getImageURL() != null ? data.getImageURL() : 'https://placehold.co/300x300?text=No+Image'}"
+                 alt="상품이미지" />
+
+            <h4 th:text="${data.getTitle()}">sample title</h4>
+
+
+            <div class = "order_container">
+                <p th:text="${data.getPrice() + '원'}">sample price</p>
+                <p th:class="'stock-count ' + (${data.stock} < 5 ? 'low' : '')"
+               th:text="'재고 : ' + ${data.stock} + '개'"></p>
+                <p class="writer" th:if="${data.usrID != null}">
+                    👤 <span th:text="'판매자 : ' + ${data.usrID}">작성자 : sampleUser</span>
+                </p>
+
+                <div class="purchase-actions">
+                    <div th:if="${#authorization.expression('isAuthenticated()')}">
+                        <div class="quantity-control">
+                          <button class="quantity-btn">-</button>
+                          <div class="quantity-number">1</div>
+                          <button class="quantity-btn">+</button>
+                        </div>
+                        <div class ="cart_and_order_box">
+                            <form action="/cart/add" method="POST">
+                                <input type="hidden" name="itemId" th:value="${data.id}">
+                                <button type="submit">🛒 장바구니</button>
+                            </form>
+                            <form action="/sales/order" method="POST">
+                            <input type="hidden" name="itemId" th:value="${data.id}">
+                            <input type="hidden" name="itemTitle" th:value="${data.getTitle()}">
+                            <input type="hidden" name="itemPrice" th:value="${data.getPrice()}">
+
+                            <button type="submit">💳 주문하기</button>
+                        </form>
+                        </div>
+
+                    </div>
+
+                    <div th:if="${#authorization.expression('isAnonymous()')}" class="login-alert">
+                        <p>🛍️ 구매를 원하시면 <a href="/member/login">로그인</a> 해주세요.</p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <!-- 댓글 영역은 바깥쪽에 유지 -->
+    <div class="comment-wrapper">
+        <div class="comment-section">
+            <h3>💬 댓글</h3>
+            <ul class="comment-list">
+                <li th:each="comment : ${commentList}" class="comment-item">
+                <div class="comment-meta">
+                    <span class="comment-username" th:text="${comment.username}">작성자</span>
+                </div>
+                <p class="comment-content" th:text="${comment.content}">댓글 내용</p>
+            </li>
+        </ul>
+    </div>
+
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <form class="comment-form" action="/item/comment" method="POST">
+            <textarea name="content" placeholder="댓글을 입력하세요..." required></textarea>
+            <input type="hidden" name="parentId" th:value="${data.id}">
+            <button type="submit">댓글 작성</button>
+        </form>
+    </div>
+
+    <div th:if="${#authorization.expression('isAnonymous()')}" class="login-alert">
+        <p>✋ 댓글을 작성하려면 <a href="/member/login">로그인</a>이 필요합니다.</p>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

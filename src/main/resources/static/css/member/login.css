@@ -1,0 +1,90 @@
+/* 네비게이션이 fixed일 경우, 본문이 가려지지 않도록 여백 확보 */
+main {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 로그인 폼 박스 */
+.login-container {
+  width: 320px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 제목 스타일 */
+.login-container h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #333;
+}
+
+.login-container h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 입력 필드 재정의 (main.css보다 우선 적용) */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* 로그인 버튼 */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* 에러 메시지 */
+#error_msg {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #ffe6e6;
+  color: #d60000;
+  border: 1px solid #ff9999;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-container button:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none; /* 마우스 이벤트 완전 차단 */
+}
+
+
+.signup-link {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.signup-link a {
+    color: #1e88e5;
+    text-decoration: underline;
+}

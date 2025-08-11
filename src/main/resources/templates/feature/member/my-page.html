@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/member/mypage.css">
+</head>
+<body>
+
+<!-- 네비게이션 바 삽입 -->
+<div th:replace="~{layout/nav :: navbar}"></div>
+
+<div class="mypage-container">
+    <div class="mypage-title">회원 정보</div>
+
+    <div class="mypage-row">
+        <span class="label">이름 :</span>
+        <span class="value" th:text="${member.getUsrName()}">sampleId</span>
+    </div>
+
+    <div class="mypage-row">
+        <span class="label">아이디 :</span>
+        <span class="value" th:text="${member.getLoginId()}">sampleId</span>
+    </div>
+
+    <div class="mypage-row">
+        <span class="label">이메일 :</span>
+        <span class="value" th:text="${member.getEmail()}">sample@email.com</span>
+    </div>
+
+    <div class="mypage-row">
+        <span class="label">권한 :</span>
+        <div sec:authorize="hasAuthority('일반유저')">
+            <span class="value">일반</span>
+
+        </div>
+    </div>
+
+    <div class="mypage-row">
+        <span class="label">주문 내역 :</span>
+        <a class="value" href="/sales/list">주문 내역 보기</a>
+    </div>
+
+
+
+</div>
+
+     <form action="/member/logout/jwt" method="post" style="margin: 0; padding: 0;">
+                <button type="submit" class="logout-link">Logout</button>
+     </form>
+
+</body>
+</html>

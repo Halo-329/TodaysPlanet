@@ -1,0 +1,45 @@
+/* 회원가입 박스만 중앙에 위치 */
+.signup-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 100px auto 0; /* 상단 여백 + 가로 중앙 정렬 */
+}
+
+/* 제목 스타일 */
+.signup-container h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 라벨 스타일 */
+.signup-container form label {
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+}
+
+/* 입력창 스타일 (main.css에 기본 있음 → 보완 가능 시 이곳에 추가) */
+.signup-container form input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 버튼 스타일 (main.css에 기본 있음 → 보완 가능 시 이곳에 추가) */
+.signup-container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}

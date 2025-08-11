@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/layout/nav.css">
+    <link rel="stylesheet" href="/css/item/list.css"/>
+    <link rel="stylesheet" href="/css/layout/pagination.css">
+    <link rel="stylesheet" href="/css/layout/search.css">
+    <script src="/js/item/delete.js"></script>
+
+
+<!-- 페이지 아래쪽에 삽입 -->
+
+</head>
+<body>
+    <div th:replace="~{layout/nav.html::navbar}"></div>
+    <div th:replace="~{layout/searchBar :: searchbar}"></div>
+
+
+
+    <div th:each="item : ${itemList}">
+        <div class="detail">
+            <img th:src="${item.getImageURL() != null ? item.getImageURL() : 'https://placehold.co/300x300?text=No+Image'}"
+     alt="상품이미지" />
+            <div class="detail-info">
+                <a th:href="@{'/item/detail/' + ${item.id}}">
+                    <h4 th:text="${item.title}">셔츠</h4>
+                </a>
+                <p th:text="|${item.price}원|">가격</p>
+                <div class="button-group" sec:authorize="isAuthenticated()">
+                    <span  th:onclick="|location.href='/item/modify/${item.id}'|"
+                          style="cursor: pointer; padding: 6px 12px;">✍🏻</span>
+                    <span class="delete-btn" th:attr="data-id=${item.id}" style="cursor: pointer; padding: 6px 12px;">🗑️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="~{layout/pagination :: pagination(${currentPage}, ${totalPages})}"></div>
+
+
+
+</body>
+</html>

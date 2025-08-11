@@ -1,0 +1,82 @@
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]:  .   ____          _            __ _ _
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]:  '  |____| .__|_| |_|_| |_\__, | / / / /
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]: =========|_|==============|___/=/_/_/_/
+Jun 15 09:38:05 ip-172-31-15-128 web[2026]: :: Spring Boot ::                (v3.4.5)
+Jun 15 09:38:06 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:06.309Z  INFO 2026 --- [shop] [           main] com.apple.shop.ShopApplication           : Starting ShopApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 2026 (/var/app/current/application.jar started by webapp in /var/app/current)
+Jun 15 09:38:06 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:06.314Z  INFO 2026 --- [shop] [           main] com.apple.shop.ShopApplication           : No active profile set, falling back to 1 default profile: "default"
+Jun 15 09:38:08 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:08.347Z  INFO 2026 --- [shop] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Jun 15 09:38:08 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:08.481Z  INFO 2026 --- [shop] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+Jun 15 09:38:09 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:09.659Z  INFO 2026 --- [shop] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+Jun 15 09:38:09 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:09.697Z  INFO 2026 --- [shop] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+Jun 15 09:38:09 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:09.698Z  INFO 2026 --- [shop] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+Jun 15 09:38:09 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:09.756Z  INFO 2026 --- [shop] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+Jun 15 09:38:09 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:09.758Z  INFO 2026 --- [shop] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3288 ms
+Jun 15 09:38:11 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:11.557Z  INFO 2026 --- [shop] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+Jun 15 09:38:11 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:11.695Z  INFO 2026 --- [shop] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+Jun 15 09:38:11 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:11.761Z  INFO 2026 --- [shop] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+Jun 15 09:38:12 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:12.407Z  INFO 2026 --- [shop] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+Jun 15 09:38:12 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:12.467Z  INFO 2026 --- [shop] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:13.216Z  INFO 2026 --- [shop] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e23ba17
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:13.219Z  INFO 2026 --- [shop] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:13.402Z  INFO 2026 --- [shop] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Database driver: undefined/unknown
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Database version: 8.0.41
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Autocommit mode: undefined/unknown
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Isolation level: undefined/unknown
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Minimum pool size: undefined/unknown
+Jun 15 09:38:13 ip-172-31-15-128 web[2026]: #011Maximum pool size: undefined/unknown
+Jun 15 09:38:14 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:14.885Z  INFO 2026 --- [shop] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Jun 15 09:38:15 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:15.037Z  INFO 2026 --- [shop] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Jun 15 09:38:15 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:15.781Z  WARN 2026 --- [shop] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Jun 15 09:38:15 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:15.825Z  INFO 2026 --- [shop] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+Jun 15 09:38:16 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:16.810Z  INFO 2026 --- [shop] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+Jun 15 09:38:16 ip-172-31-15-128 web[2026]: 2025-06-15T09:38:16.853Z  INFO 2026 --- [shop] [           main] com.apple.shop.ShopApplication           : Started ShopApplication in 11.775 seconds (process running for 13.287)
+Jun 15 09:46:06 ip-172-31-15-128 web[2026]: 2025-06-15T09:46:06.838Z  INFO 2026 --- [shop] [nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Jun 15 09:46:06 ip-172-31-15-128 web[2026]: 2025-06-15T09:46:06.841Z  INFO 2026 --- [shop] [nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Jun 15 09:46:06 ip-172-31-15-128 web[2026]: 2025-06-15T09:46:06.844Z  INFO 2026 --- [shop] [nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Jun 15 09:48:59 ip-172-31-15-128 web[2026]: 2025-06-15T09:48:59.596Z  INFO 2026 --- [shop] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+Jun 15 09:48:59 ip-172-31-15-128 web[2026]: 2025-06-15T09:48:59.610Z  INFO 2026 --- [shop] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+Jun 15 09:48:59 ip-172-31-15-128 web[2026]: 2025-06-15T09:48:59.632Z  INFO 2026 --- [shop] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Jun 15 09:48:59 ip-172-31-15-128 web[2026]: 2025-06-15T09:48:59.643Z  INFO 2026 --- [shop] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+Jun 15 09:48:59 ip-172-31-15-128 web[2026]: 2025-06-15T09:48:59.971Z  INFO 2026 --- [shop] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]:  .   ____          _            __ _ _
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]:  '  |____| .__|_| |_|_| |_\__, | / / / /
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: =========|_|==============|___/=/_/_/_/
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: :: Spring Boot ::                (v3.4.5)
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:04.345Z  INFO 2848 --- [shop] [           main] com.apple.shop.ShopApplication           : Starting ShopApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 2848 (/var/app/current/application.jar started by webapp in /var/app/current)
+Jun 15 09:49:04 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:04.356Z  INFO 2848 --- [shop] [           main] com.apple.shop.ShopApplication           : No active profile set, falling back to 1 default profile: "default"
+Jun 15 09:49:06 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:06.636Z  INFO 2848 --- [shop] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Jun 15 09:49:06 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:06.743Z  INFO 2848 --- [shop] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+Jun 15 09:49:07 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:07.875Z  INFO 2848 --- [shop] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+Jun 15 09:49:07 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:07.898Z  INFO 2848 --- [shop] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+Jun 15 09:49:07 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:07.899Z  INFO 2848 --- [shop] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+Jun 15 09:49:07 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:07.959Z  INFO 2848 --- [shop] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+Jun 15 09:49:07 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:07.961Z  INFO 2848 --- [shop] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3426 ms
+Jun 15 09:49:09 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:09.669Z  INFO 2848 --- [shop] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+Jun 15 09:49:09 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:09.803Z  INFO 2848 --- [shop] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+Jun 15 09:49:09 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:09.874Z  INFO 2848 --- [shop] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+Jun 15 09:49:10 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:10.527Z  INFO 2848 --- [shop] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+Jun 15 09:49:10 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:10.581Z  INFO 2848 --- [shop] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:11.237Z  INFO 2848 --- [shop] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f0ae0ee
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:11.241Z  INFO 2848 --- [shop] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:11.494Z  INFO 2848 --- [shop] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Database driver: undefined/unknown
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Database version: 8.0.41
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Autocommit mode: undefined/unknown
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Isolation level: undefined/unknown
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Minimum pool size: undefined/unknown
+Jun 15 09:49:11 ip-172-31-15-128 web[2848]: #011Maximum pool size: undefined/unknown
+Jun 15 09:49:13 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:13.007Z  INFO 2848 --- [shop] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Jun 15 09:49:13 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:13.175Z  INFO 2848 --- [shop] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Jun 15 09:49:13 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:13.850Z  WARN 2848 --- [shop] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Jun 15 09:49:13 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:13.881Z  INFO 2848 --- [shop] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+Jun 15 09:49:14 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:14.844Z  INFO 2848 --- [shop] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+Jun 15 09:49:14 ip-172-31-15-128 web[2848]: 2025-06-15T09:49:14.874Z  INFO 2848 --- [shop] [           main] com.apple.shop.ShopApplication           : Started ShopApplication in 11.66 seconds (process running for 13.551)

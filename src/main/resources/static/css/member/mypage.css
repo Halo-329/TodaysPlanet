@@ -1,0 +1,55 @@
+.mypage-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mypage-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.mypage-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+.value {
+  color: #222;
+}
+
+.logout-link {
+    display: block;
+    width: 120px;
+    padding: 12px 15px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #cc0000;
+}

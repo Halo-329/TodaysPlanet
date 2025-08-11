@@ -1,0 +1,59 @@
+<!-- templates/comment/comment.html -->
+<div class="comment-section" th:fragment="commentBox(item)">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+
+    <h3>댓글</h3>
+
+    <ul id="commentList" class="comment-list"></ul>
+
+    <div th:if="${#authentication.principal != null}" class="comment-form">
+        <textarea id="commentInput" placeholder="댓글을 입력하세요..." rows="3"></textarea>
+        <button id="submitBtn">댓글 작성</button>
+    </div>
+
+    <div th:if="${#authentication.principal == null}">
+        <p>로그인 후 댓글을 작성할 수 있습니다.</p>
+    </div>
+
+    <!-- JS 영역: item.id를 사용할 수 있게 설정 -->
+    <script th:inline="javascript">
+        const itemId = [[${item.id}]];
+
+        // 댓글 불러오기
+        fetch(`/api/comments/${itemId}`)
+            .then(res => res.json())
+            .then(data => {
+                const commentList = document.getElementById('commentList');
+                data.forEach(c => {
+                    const li = document.createElement('li');
+                    li.textContent = `${c.username} : ${c.content}`;
+                    commentList.appendChild(li);
+                });
+            });
+
+        // 댓글 작성
+        const btn = document.getElementById("submitBtn");
+        if (btn) {
+            btn.addEventListener("click", async () => {
+                const input = document.getElementById("commentInput");
+                const body = input.value.trim();
+                if (!body) return;
+
+                const res = await fetch("/api/comments", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        content: body,
+                        parentId: itemId
+                    })
+                });
+
+                const newComment = await res.json();
+                const li = document.createElement('li');
+                li.textContent = `${newComment.username} : ${newComment.content}`;
+                document.getElementById('commentList').appendChild(li);
+                input.value = '';
+            });
+        }
+    </script>
+</div>
